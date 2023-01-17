@@ -5,21 +5,24 @@
 }
 
 body {
-    background: #fff;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    color: #333333;
-    line-height: 28px;
-    text-align: center;
-    overflow-x: hidden !important;
-    margin: auto !important;
+	background: #fff;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	color: #333333;
+	line-height: 28px;
+	text-align: center;
+	overflow-x: hidden !important;
+	margin: auto !important;
 }
 
-a, a:hover, a:active, a:focus {
-    border: 0 none;
-    outline: 0 none;
-    text-decoration: none;
+a,
+a:hover,
+a:active,
+a:focus {
+	border: 0 none;
+	outline: 0 none;
+	text-decoration: none;
 }
 
 /* TYPOGRAPHIE */
@@ -27,34 +30,34 @@ a, a:hover, a:active, a:focus {
 h1,
 h2 {
 	font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
+	font-weight: 300;
 }
 
 h1 {
-    font-size: 42px;
-    line-height: 62px;
+	font-size: 42px;
+	line-height: 62px;
 }
 
 h2 {
-    font-size: 32px;
-    line-height: 42px;
+	font-size: 32px;
+	line-height: 42px;
 }
 
 h3 {
-    font-size: 22px;
-    line-height: 38px;
-    font-weight: 300;
+	font-size: 22px;
+	line-height: 38px;
+	font-weight: 300;
 }
 
 h4 {
-    font-size: 20px;
-    line-height: 30px;
-    font-weight: 300;
+	font-size: 20px;
+	line-height: 30px;
+	font-weight: 300;
 }
 
 h5 {
-    font-size: 18px;
-    font-weight: 300;
+	font-size: 18px;
+	font-weight: 300;
 }
 
 
@@ -63,9 +66,9 @@ h5 {
 .form-control {
 	background: none repeat scroll 0 0 rgba(255, 255, 255, 0.5);
 	border-radius: 0px;
-    box-shadow: none;
-    height: 57px;
-    padding-left: 20px;
+	box-shadow: none;
+	height: 57px;
+	padding-left: 20px;
 }
 
 /* CUSTOM CLASSES */
@@ -78,9 +81,9 @@ h5 {
 	background: #008ed6;
 	display: block;
 	margin: auto;
-    height: 1px;
-    width: 25%;
-    z-index: 1;
+	height: 1px;
+	width: 25%;
+	z-index: 1;
 	margin-bottom: 5px;
 }
 
@@ -88,25 +91,25 @@ h5 {
 	background: #008ed6;
 	display: block;
 	float: right;
-    height: 1px;
-    width: 165px;
-    z-index: 1;
+	height: 1px;
+	width: 165px;
+	z-index: 1;
 }
 
 .button-leweb {
 	background: none repeat scroll 0 0 rgba(22, 182, 234, 0.5);
-    border: 1px solid #fff;
+	border: 1px solid #fff;
 	color: #fff;
 	border-radius: 0px;
-    box-shadow: none;
+	box-shadow: none;
 	height: 57px;
 	padding-left: 18px;
 	padding-right: 18px;
-	
+
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
-	transition: all 0.5s ease; 
+	transition: all 0.5s ease;
 }
 
 
@@ -120,6 +123,7 @@ h5 {
 section {
 	padding: 120px 0px;
 }
+
 /* HEADER */
 
 #header {
@@ -133,7 +137,7 @@ section {
 	background: url(../images/body-bg1.png) repeat 0 0;
 	height: 100vh;
 	width: 100% !important;
-	padding: 0px;	
+	padding: 0px;
 	z-index: 998;
 }
 
@@ -160,7 +164,7 @@ section {
 	overflow: hidden;
 	position: absolute;
 	z-index: 999;
-	text-align:center;
+	text-align: center;
 	text-decoration: none;
 }
 
@@ -168,28 +172,60 @@ section {
 	text-align: center;
 	font-size: 48px;
 	color: #fff;
-	
+
 	-webkit-animation: leweb_fade_move_down 2s ease-in-out infinite;
 	-moz-animation: leweb_fade_move_down 2s ease-in-out infinite;
 	animation: leweb_fade_move_down 2s ease-in-out infinite;
-   }
+}
 
-	/* Animated Arrow Down Header */
-	
+/* Animated Arrow Down Header */
+
 @-webkit-keyframes leweb_fade_move_down {
-  0%   { -webkit-transform:translate(0,-20px); opacity: 0;  }
-  50%  { opacity: 1;  }
-  100% { -webkit-transform:translate(0,20px); opacity: 0; }
+	0% {
+		-webkit-transform: translate(0, -20px);
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		-webkit-transform: translate(0, 20px);
+		opacity: 0;
+	}
 }
+
 @-moz-keyframes leweb_fade_move_down {
-  0%   { -moz-transform:translate(0,-20px); opacity: 0;  }
-  50%  { opacity: 1;  }
-  100% { -moz-transform:translate(0,20px); opacity: 0; }
+	0% {
+		-moz-transform: translate(0, -20px);
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		-moz-transform: translate(0, 20px);
+		opacity: 0;
+	}
 }
+
 @keyframes leweb_fade_move_down {
-  0%   { transform:translate(0,-20px); opacity: 0;  }
-  50%  { opacity: 1;  }
-  100% { transform:translate(0,20px); opacity: 0; }
+	0% {
+		transform: translate(0, -20px);
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		transform: translate(0, 20px);
+		opacity: 0;
+	}
 }
 
 
@@ -224,7 +260,7 @@ section {
 	line-height: 65px;
 	height: 65px;
 	width: 65px;
-	background: rgba(0, 142, 214, 0.7);	
+	background: rgba(0, 142, 214, 0.7);
 	box-shadow: 0 0 0 1px #008ed6;
 }
 
@@ -232,14 +268,14 @@ section {
 	padding: 100px 0px 120px 0px;
 }
 
-#subscribe h5{
+#subscribe h5 {
 	margin-bottom: 45px;
 }
 
 #subscribe .form-control {
 	display: inline-block;
 	border: 1px solid #fff;
-    width: 320px;
+	width: 320px;
 }
 
 #subscribe .form-control::-moz-placeholder {
@@ -260,21 +296,21 @@ section {
 }
 
 #subscribe #mc_form .valid:before {
-        font-family: FontAwesome;
-        top:0;
-        content: "\f058";
-		font-size: 14px;
-		margin-right: 4px;
-		color: #b8c000;
+	font-family: FontAwesome;
+	top: 0;
+	content: "\f058";
+	font-size: 14px;
+	margin-right: 4px;
+	color: #b8c000;
 }
 
 #subscribe #mc_form .error:before {
-        font-family: FontAwesome;
-        top:0;
-        content: "\f071";
-		font-size: 14px;
-		margin-right: 4px;
-		color: #bb1720;
+	font-family: FontAwesome;
+	top: 0;
+	content: "\f071";
+	font-size: 14px;
+	margin-right: 4px;
+	color: #bb1720;
 }
 
 
@@ -326,33 +362,35 @@ section {
 /* RESPONSIVE DESIGN */
 
 /* Extra Small devices (tablets, 446px and less) */
-@media (max-width: 456px) { 
-	
+@media (max-width: 456px) {
+
 	#mc_form .form-control {
 		width: 100%;
 		margin-bottom: 15px;
 	}
-	
+
 	.button-leweb {
 		width: 100%;
 	}
-	
+
 	#header .logo {
 		width: 200px;
 	}
-	
+
 	#header h1 {
 		display: none;
 	}
 
 }
+
 /* Small devices (tablets, 768px and less) */
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
 
 	body {
 		font-size: 14px;
 		line-height: 20px;
 	}
+
 	h1 {
 		font-size: 44px;
 		line-height: 58px;
@@ -377,26 +415,25 @@ section {
 		font-size: 14px;
 		line-height: 20px;
 	}
-	
-	.clocktitle{
+
+	.clocktitle {
 		font-size: 11px;
 	}
 
 	.numbers {
 		font-size: 44px;
 	}
-	
+
 	#header .col-md-8 {
 		top: 5%;
 	}
 }
 
 /* Medium devices (desktops, 992px and up) */
-@media (max-width: 992px) {	
-	
+@media (max-width: 992px) {
+
 	#about .middle {
 		margin-top: 65px;
 		margin-bottom: 65px;
 	}
 }
-
