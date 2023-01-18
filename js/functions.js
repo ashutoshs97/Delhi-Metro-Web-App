@@ -6,15 +6,6 @@
 
 $(document).ready(function () {
 
-
-
-
-
-	/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	DONT CHANGE ANY CODE UNDER THIS LINE - DONT CHANGE ANY CODE UNDER THIS LINE - DONT CHANGE ANY CODE UNDER THIS LINE
-	*/ //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
-
-
 	// PRELOADER	
 	setTimeout(function () {
 		$('body').addClass('loaded');
@@ -22,7 +13,6 @@ $(document).ready(function () {
 
 	// SCROLL REVEAL
 	window.sr = new scrollReveal();
-
 
 	// PARALLAX IMAGES 
 	$('#subscribe').parallax("50%", 0.0);
@@ -44,6 +34,8 @@ $(document).ready(function () {
 		$(this).prev("label").hide();
 		$(this).prev().prev("label").hide();
 	});
+
+
 
 	$("#contact_form").submit(function () {
 		var name = $("#name").val();
