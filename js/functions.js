@@ -35,8 +35,6 @@ $(document).ready(function () {
 		$(this).prev().prev("label").hide();
 	});
 
-
-
 	$("#contact_form").submit(function () {
 		var name = $("#name").val();
 		var phone = $("#phone").val();
