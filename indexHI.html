@@ -60,6 +60,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
 	</script>
+
 </head>
 
 <body>
@@ -68,7 +69,6 @@
 		<div class="container">
 			<div class="row text-center">
 				<div class="col-md-8">
-					<br><br><br><br>
 					<img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/6/65/Delhi_Metro_logo.svg" />
 					<h1 class="	white-text">Delhi Metro</h1>
 					<h5 class="white-text">DELHI METRO ROUTE PLANNER<br><br>Find Delhi metro route, stations list, fare,
@@ -86,38 +86,33 @@
 	<!-- HEADER ENDS -->
 	<br><br>
 
-	<div id="google_translate_element"></div>
-
-	<!-- function which will translate the web page using google translator -->
-	<script type="text/javascript">
-		function googleTranslateElementInit() {
-			new google.translate.TranslateElement({
-					pageLanguage: 'en'
-				},
-				'google_translate_element'
-			);
-		}
-	</script>
-
-	<!-- Script code for google translator API -->
-	<script type="text/javascript"
-		src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-	</script>
+	<center>
+	<div class="switch">
+	    <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
+	    <label for="language-toggle"></label>
+	    <span class="on">EN</span>
+	    <span class="off"><a href="indexHI.html">HI</a></span>
+  	</div>
+    </center>
 
 	<marquee width="90%" direction="left" height="40px" scrollamount="6">
-		<b>Update:</b>
-		Due to renovation work, the parking area at Sultanpur Metro Station will remain closed for commuters from 1st
-		June 2023 till 10th June 2023.
-
-		Inconvenience is regretted.
+		<b>Security Update :</b>
+		Additional time might be needed in view of enhanced security and frisking measures ahead of Republic Day. Please
+		allow
+		for some extra time in your commute.
+		Your cooperation is kindly solicited.
 	</marquee>
 
 	<marquee width="90%" direction="left" height="40px" scrollamount="6">
-		<b></b>
-		जीर्णोद्धार कार्य के कारण सुल्तानपुर मेट्रो स्टेशन पर पार्किंग क्षेत्र 1 जून 2023 से 10 जून 2023 तक यात्रियों के
-		लिए बंद रहेगा।
+		<b>यात्रीगण कृपया ध्यान दें</b>
+		आगामी गणतंत्र दिवस की वजह से मेट्रो परिसर में सुरक्षा गतिविधियाँ बढ़ाई गई हैं जिसके कारण सेक्योरिटी चेक आदि में
+		अतिरिक्त समय लग सकता है। कृपया अपनी आवाजाही में कुछ समय अतिरिक्त लेकर चलें।
+		आपके सहयोग के लिए धन्यवाद।
+	</marquee>
 
-		असुविधा के लिए खेद है।
+	<marquee width="90%" direction="left" height="40px" scrollamount="9">
+		<b>Republic Day Parade Imp Announcement</b>
+		In order to facilitate people who are in possession of bonafide e-Invitation Cards/e-Tickets for attending the 74th Republic Day ceremony on 26th January 2023 at Kartavya Path, Delhi Metro will issue tickets (coupons) to them from its Metro stations across network <b>free of cost</b>.
 	</marquee>
 
 	<!-- ABOUT -->
@@ -181,18 +176,10 @@
 				<p>Delhi Metro Museum</p><br><br>
 			</div>
 
-			<!-- Section 7 -->
-			<div data-sr="enter top over 1s, wait 0.3s, move 24px, reset" class="col-md-4">
-				<a href="crowdness indicator.html"><i class="fa fa-users"></i></a>
-				<h3>Crowdness Indicator</h3>
-				<div class="colored-line-small-center"></div>
-				<p>Coach by Coach Crowd Indic</p><br><br>
-			</div>
-
 			<!-- Section 8 -->
 
 			<div data-sr="enter top over 1s, wait 0.3s, move 24px, reset" class="col-md-4">
-				<a href="mailto:delhimetrorp@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+				<a href="mailto:delhimetrorp@gmail.com"><i class="fa fa-envelope"></i></a>
 				<h3>Feedback</h3>
 				<div class="colored-line-small-center"></div>
 				<p>Email us</p><br><br>
@@ -346,7 +333,7 @@
 				</div>
 
 			</div>
-		</div>
+
 
 	</section>
 	<!-- Button ENDS -->
