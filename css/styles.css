@@ -234,7 +234,7 @@ section {
 #about i {
 	color: #fff;
 	font-size: 75px;
-	background: #008ed6;
+	background: #733828;
 	border-radius: 50%;
 	line-height: 175px;
 	height: 175px;
@@ -347,7 +347,7 @@ section {
 
 #footer .fa {
 	font-size: 24px;
-	color: rgba(22, 182, 234, 0.5);
+	color: #733828;
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
@@ -355,7 +355,7 @@ section {
 }
 
 #footer .fa:hover {
-	color: #008ed6;
+	color: #93705e;
 }
 
 /*Button Css Start*/
