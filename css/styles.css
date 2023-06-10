@@ -358,77 +358,6 @@ section {
 	color: #008ed6;
 }
 
-
-/* RESPONSIVE DESIGN */
-
-/* Extra Small devices (tablets, 446px and less) */
-@media (max-width: 456px) {
-
-	#mc_form .form-control {
-		width: 100%;
-		margin-bottom: 15px;
-	}
-
-	.button-leweb {
-		width: 100%;
-	}
-
-	#header .logo {
-		width: 200px;
-	}
-
-	#header h1 {
-		display: none;
-	}
-
-}
-
-/* Small devices (tablets, 768px and less) */
-@media (max-width: 768px) {
-
-	body {
-		font-size: 14px;
-		line-height: 20px;
-	}
-
-	h1 {
-		font-size: 44px;
-		line-height: 58px;
-	}
-
-	h2 {
-		font-size: 24px;
-		line-height: 38px;
-	}
-
-	h3 {
-		font-size: 18px;
-		line-height: 30px;
-	}
-
-	h4 {
-		font-size: 16px;
-		line-height: 26px;
-	}
-
-	h5 {
-		font-size: 14px;
-		line-height: 20px;
-	}
-
-	.clocktitle {
-		font-size: 11px;
-	}
-
-	.numbers {
-		font-size: 44px;
-	}
-
-	#header .col-md-8 {
-		top: 5%;
-	}
-}
-
 /*Button Css Start*/
 @import url("https://fonts.googleapis.com/css?family=Roboto:900");
 
@@ -1376,10 +1305,81 @@ input.check-toggle-round-flat:checked+label:after {
 }
 
 .btncenter {
-	 display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 10vh; /* Adjust this value based on your requirements */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 10vh;
+	/* Adjust this value based on your requirements */
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Extra Small devices (tablets, 446px and less) */
+@media (max-width: 456px) {
+
+	#mc_form .form-control {
+		width: 100%;
+		margin-bottom: 15px;
+	}
+
+	.button-leweb {
+		width: 100%;
+	}
+
+	#header .logo {
+		width: 200px;
+	}
+
+	#header h1 {
+		display: none;
+	}
+
+}
+
+/* Small devices (tablets, 768px and less) */
+@media (max-width: 768px) {
+
+	body {
+		font-size: 14px;
+		line-height: 20px;
+	}
+
+	h1 {
+		font-size: 44px;
+		line-height: 58px;
+	}
+
+	h2 {
+		font-size: 24px;
+		line-height: 38px;
+	}
+
+	h3 {
+		font-size: 18px;
+		line-height: 30px;
+	}
+
+	h4 {
+		font-size: 16px;
+		line-height: 26px;
+	}
+
+	h5 {
+		font-size: 14px;
+		line-height: 20px;
+	}
+
+	.clocktitle {
+		font-size: 11px;
+	}
+
+	.numbers {
+		font-size: 44px;
+	}
+
+	#header .col-md-8 {
+		top: 5%;
+	}
 }
 
 
