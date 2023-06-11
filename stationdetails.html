@@ -3,10 +3,49 @@
 
 <head>
   <title>Delhi Metro Station Details</title>
+
+  <!--Java Script-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Roboto&display=swap"
+    rel="stylesheet">
+
+  <!-- WEB FONTS -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,100italic,400,300italic' rel='stylesheet'
+    type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap"
+    rel="stylesheet">
+  <link rel="shortcut icon" href="images\favicon.ico" type="image/x-icon">
+
+  <!-- BOOTSTRAP -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/7d405a99ed.js" crossorigin="anonymous"></script>
+
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f1f1f1;
+      background-color: #9a6f5f;
     }
 
     .container {
@@ -191,17 +230,18 @@
     </div>
 
     <div class="details" id="stationDetails">
-      <p><strong>Station Name:</strong> <span id="stationName"></span></p>
-      <p><strong>Location:</strong> <span id="stationLocation"></span></p>
-      <p><strong>Lines:</strong> <span id="stationLines"></span></p>
-      <p><strong>Parking:</strong> <span id="stationParking"></span></p>
-      <p><strong>ATM:</strong> <span id="stationATM"></span></p>
-      <p><strong>Snacks:</strong> <span id="stationSnacks"></span></p>
-      <p><strong>Water Booth:</strong> <span id="stationWater"></span></p>
-      <p><strong>Lift/Escalator Available:</strong> <span id="stationLift"></span></p>
-      <p><strong>Travel (Yulu/Cab):</strong> <span id="stationTravel"></span></p>
-      <p><strong>Medical:</strong> <span id="stationMedical"></span></p>
-      <p><strong>Divyang Friendly Station:</strong> <span id="stationDivyang"></span></p>
+      <p><strong><i class="fa-solid fa-train-subway">&nbsp</i>Station Name:</strong> <span id="stationName"></span>
+      </p>
+      <p><strong><i class="fa-solid fa-location-dot">&nbsp</i>Location:</strong> <span id="stationLocation"></span></p>
+      <p><strong><i class="fa-solid fa-grip-lines">&nbsp</i>Lines:</strong> <span id="stationLines"></span></p>
+      <p><strong><i class="fa-solid fa-car">&nbsp</i>Parking:</strong> <span id="stationParking"></span></p>
+      <p><strong><i class="fa-solid fa-money-bills">&nbsp</i>ATM:</strong> <span id="stationATM"></span></p>
+      <p><strong><i class="fa-solid fa-bowl-food">&nbsp</i>Snacks:</strong> <span id="stationSnacks"></span></p>
+      <p><strong><i class="fa-solid fa-droplet">&nbsp</i>Water Booth:</strong> <span id="stationWater"></span></p>
+      <p><strong><i class="fa-solid fa-elevator">&nbsp</i>Lift/Escalator Available:</strong> <span id="stationLift"></span></p>
+      <p><strong><i class="fa-solid fa-bicycle">&nbsp</i>Travel (Yulu/Cab):</strong> <span id="stationTravel"></span></p>
+      <p><strong><i class="fa-solid fa-house-medical">&nbsp</i>Medical:</strong> <span id="stationMedical"></span></p>
+      <p><strong><i class="fa-solid fa-wheelchair ">&nbsp</i>Divyang Friendly Station:</strong> <span id="stationDivyang"></span></p>
     </div>
   </div>
 
@@ -378,7 +418,7 @@
           stationLines.textContent = "Blue Line, Magenta Line";
           stationParking.textContent = "Yes";
           stationATM.textContent = "No";
-          stationSnacks.textContent = "No";
+          stationSnacks.textContent = "Yes";
           stationWater.textContent = "No";
           stationLift.textContent = "Yes";
           stationTravel.textContent = "No";
@@ -390,11 +430,11 @@
           stationLocation.textContent = "New Delhi";
           stationLines.textContent = "Yellow Line, Violet Line";
           stationParking.textContent = "Yes";
-          stationATM.textContent = "No";
-          stationSnacks.textContent = "No";
+          stationATM.textContent = "Yes";
+          stationSnacks.textContent = "Yes";
           stationWater.textContent = "No";
           stationLift.textContent = "Yes";
-          stationTravel.textContent = "No";
+          stationTravel.textContent = "Yes";
           stationMedical.textContent = "No";
           stationDivyang.textContent = "Yes";
           break;
@@ -534,7 +574,7 @@
           stationLines.textContent = "Yellow Line, Magenta Line";
           stationParking.textContent = "Yes";
           stationATM.textContent = "No";
-          stationSnacks.textContent = "No";
+          stationSnacks.textContent = "Yes";
           stationWater.textContent = "No";
           stationLift.textContent = "Yes";
           stationTravel.textContent = "No";
@@ -576,7 +616,7 @@
           stationSnacks.textContent = "No";
           stationWater.textContent = "No";
           stationLift.textContent = "Yes";
-          stationTravel.textContent = "No";
+          stationTravel.textContent = "YES";
           stationMedical.textContent = "No";
           stationDivyang.textContent = "Yes";
           break;
@@ -638,8 +678,8 @@
           stationLines.textContent = "Blue Line";
           stationParking.textContent = "Yes";
           stationATM.textContent = "No";
-          stationSnacks.textContent = "No";
-          stationWater.textContent = "No";
+          stationSnacks.textContent = "Yes";
+          stationWater.textContent = "Yes";
           stationLift.textContent = "Yes";
           stationTravel.textContent = "No";
           stationMedical.textContent = "No";
@@ -768,8 +808,8 @@
           stationLines.textContent = "Blue Line";
           stationParking.textContent = "Yes";
           stationATM.textContent = "No";
-          stationSnacks.textContent = "No";
-          stationWater.textContent = "No";
+          stationSnacks.textContent = "Yes";
+          stationWater.textContent = "Yes";
           stationLift.textContent = "Yes";
           stationTravel.textContent = "No";
           stationMedical.textContent = "No";
@@ -1357,8 +1397,8 @@
           stationSnacks.textContent = "No";
           stationWater.textContent = "No";
           stationLift.textContent = "Yes";
-          stationTravel.textContent = "No";
-          stationMedical.textContent = "No";
+          stationTravel.textContent = "Yes";
+          stationMedical.textContent = "";
           stationDivyang.textContent = "Yes";
           break;
         case "station87":
@@ -1832,6 +1872,19 @@
       }
     }
   </script>
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- SMOOTH SCROLL -->
+  <script src="js/smooth-scroll.min.js"></script>
+  <!-- PARALLAX IMG -->
+  <script src="js/jquery.parallax-1.1.3.js"></script>
+  <!-- SCROLL REVEAL -->
+  <script src="js/scrollReveal.min.js"></script>
 </body>
+
 
 </html>
