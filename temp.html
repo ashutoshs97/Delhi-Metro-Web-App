@@ -2,126 +2,106 @@
 <html>
 
 <head>
-  <title>Delhi Metro Station Details</title>
+  <title>Delhi Metro Interactive Map</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 20px;
-      background-color: #f5f5f5;
     }
 
     h1 {
       text-align: center;
-      color: #333;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     }
 
-    label {
-      font-weight: bold;
-      color: #333;
+    #map {
+      width: 800px;
+      height: 600px;
+      background-color: #f0f0f0;
+      position: relative;
+      margin: 0 auto;
     }
 
-    select {
-      padding: 10px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      background-color: #fff;
-      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease-in-out;
-      transform-style: preserve-3d;
-      perspective: 1000px;
+    .station {
+      width: 10px;
+      height: 10px;
+      background-color: #333;
+      border-radius: 50%;
+      position: absolute;
+      cursor: pointer;
     }
 
-    select:hover {
-      transform: rotateX(10deg);
+    .station:hover {
+      background-color: #ff0000;
     }
 
     #stationInfo {
-      margin-top: 30px;
+      margin-top: 20px;
       border: 1px solid #ccc;
-      padding: 20px;
-      background-color: #fff;
-      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      padding: 10px;
+      display: none;
     }
 
-    #stationName {
-      font-size: 18px;
-      font-weight: bold;
-      color: #333;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    }
-
-    #stationLocation {
+    #stationInfo h2 {
+      margin: 0;
       font-size: 16px;
-      color: #555;
     }
 
-    #stationLines {
-      font-size: 16px;
-      color: #555;
+    #stationInfo p {
+      margin: 5px 0;
+      font-size: 14px;
     }
   </style>
   <script>
     function showStationInfo(station) {
-      var stationName = document.getElementById("stationName");
-      var stationLocation = document.getElementById("stationLocation");
-      var stationLines = document.getElementById("stationLines");
+      var stationInfo = document.getElementById("stationInfo");
+      stationInfo.style.display = "block";
 
-      switch (station) {
-        // Add cases for each station
-        case "station1":
-          stationName.textContent = "Adarsh Nagar";
-          stationLocation.textContent = "North Delhi";
-          stationLines.textContent = "Yellow Line";
-          break;
-        case "station2":
-          stationName.textContent = "AIIMS";
-          stationLocation.textContent = "South Delhi";
-          stationLines.textContent = "Yellow Line, Pink Line";
-          break;
-        case "station3":
-          stationName.textContent = "Akshardham";
-          stationLocation.textContent = "East Delhi";
-          stationLines.textContent = "Blue Line";
-          break;
-        // ...
-        case "station286":
-          stationName.textContent = "Yamuna Bank";
-          stationLocation.textContent = "East Delhi";
-          stationLines.textContent = "Blue Line";
-          break;
-        default:
-          stationName.textContent = "Invalid Station";
-          stationLocation.textContent = "";
-          stationLines.textContent = "";
-          break;
-      }
+      // Update station information
+      var stationName = station.getAttribute("data-name");
+      var stationLocation = station.getAttribute("data-location");
+      var stationLines = station.getAttribute("data-lines");
+
+      document.getElementById("stationName").textContent = stationName;
+      document.getElementById("stationLocation").textContent = stationLocation;
+      document.getElementById("stationLines").textContent = stationLines;
+    }
+
+    function hideStationInfo() {
+      var stationInfo = document.getElementById("stationInfo");
+      stationInfo.style.display = "none";
     }
   </script>
 </head>
 
 <body>
-  <h1>Delhi Metro Station Information</h1>
-  <form>
-    <label for="station">Select a station:</label>
-    <select id="station" name="station" onchange="showStationInfo(this.value)">
-      <option value="">Select</option>
-      <option value="station1">Adarsh Nagar</option>
-      <option value="station2">AIIMS</option>
-      <option value="station3">Akshardham</option>
-      <!-- Add options for all 286 stations -->
-      <!-- ... -->
-      <option value="station286">Yamuna Bank</option>
-    </select>
-  </form>
-  <div id="stationInfo">
-    <h2>Station Information:</h2>
-    <p><strong>Name:</strong> <span id="stationName"></span></p>
-    <p><strong>Location:</strong> <span id="stationLocation"></span></p>
-    <p><strong>Lines:</strong> <span id="stationLines"></span></p>
+  <h1>Delhi Metro Interactive Map</h1>
+  <div id="map">
+    <!-- Stations -->
+    <div class="station" data-name="Adarsh Nagar" data-location="North Delhi" data-lines="Yellow Line"
+      style="top: 100px; left: 100px;" onclick="showStationInfo(this)"></div>
+    <div class="station" data-name="AIIMS" data-location="South Delhi" data-lines="Yellow Line, Pink Line"
+      style="top: 200px; left: 300px;" onclick="showStationInfo(this)"></div>
+    <!-- Add more stations -->
+
+    <!-- Station Info -->
+    <div id="stationInfo">
+      <h2>Station Information:</h2>
+      <p><strong>Name:</strong> <span id="stationName"></span></p>
+      <p><strong>Location:</strong> <span id="stationLocation"></span></p>
+      <p><strong>Lines:</strong> <span id="stationLines"></span></p>
+    </div>
   </div>
+
+  <script>
+    // Close station info when clicking outside the map
+    window.onclick = function(event) {
+      var map = document.getElementById("map");
+      if (event.target == map) {
+        hideStationInfo();
+      }
+    };
+  </script>
 </body>
 
 </html>
