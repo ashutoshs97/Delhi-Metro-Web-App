@@ -78,7 +78,7 @@ h5 {
 }
 
 .colored-line-small-center {
-	background: #008ed6;
+	background: #733828;
 	display: block;
 	margin: auto;
 	height: 1px;
@@ -377,8 +377,8 @@ a {
 
 .h-button {
 	background: lightgreen;
-	padding: 20px;
-	width: 250px;
+	padding: 15px;
+	width: 200px;
 	text-align: center;
 }
 
@@ -447,9 +447,9 @@ a {
 
 /*Inactive Button Start*/
 .inactive {
-	background: red;
-	padding: 20px;
-	width: 250px;
+	background: rgb(255, 52, 52);
+	padding: 18px;
+	width: 220px;
 	text-align: center;
 }
 
@@ -516,7 +516,7 @@ a {
 	transition-delay: 0.15s;
 }
 
-/*Inactive Buttonend*/
+/*Inactive Button end*/
 /*Button Css end*/
 
 /*Translate Button*/
