@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Delhi Metro Station Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    label {
+      font-weight: bold;
+      color: #333;
+    }
+
+    select {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #fff;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease-in-out;
+      transform-style: preserve-3d;
+      perspective: 1000px;
+    }
+
+    select:hover {
+      transform: rotateX(10deg);
+    }
+
+    #stationInfo {
+      margin-top: 30px;
+      border: 1px solid #ccc;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    #stationName {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    #stationLocation {
+      font-size: 16px;
+      color: #555;
+    }
+
+    #stationLines {
+      font-size: 16px;
+      color: #555;
+    }
+  </style>
+  <script>
+    function showStationInfo(station) {
+      var stationName = document.getElementById("stationName");
+      var stationLocation = document.getElementById("stationLocation");
+      var stationLines = document.getElementById("stationLines");
+
+      switch (station) {
+        // Add cases for each station
+        case "station1":
+          stationName.textContent = "Adarsh Nagar";
+          stationLocation.textContent = "North Delhi";
+          stationLines.textContent = "Yellow Line";
+          break;
+        case "station2":
+          stationName.textContent = "AIIMS";
+          stationLocation.textContent = "South Delhi";
+          stationLines.textContent = "Yellow Line, Pink Line";
+          break;
+        case "station3":
+          stationName.textContent = "Akshardham";
+          stationLocation.textContent = "East Delhi";
+          stationLines.textContent = "Blue Line";
+          break;
+        // ...
+        case "station286":
+          stationName.textContent = "Yamuna Bank";
+          stationLocation.textContent = "East Delhi";
+          stationLines.textContent = "Blue Line";
+          break;
+        default:
+          stationName.textContent = "Invalid Station";
+          stationLocation.textContent = "";
+          stationLines.textContent = "";
+          break;
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Delhi Metro Station Information</h1>
+  <form>
+    <label for="station">Select a station:</label>
+    <select id="station" name="station" onchange="showStationInfo(this.value)">
+      <option value="">Select</option>
+      <option value="station1">Adarsh Nagar</option>
+      <option value="station2">AIIMS</option>
+      <option value="station3">Akshardham</option>
+      <!-- Add options for all 286 stations -->
+      <!-- ... -->
+      <option value="station286">Yamuna Bank</option>
+    </select>
+  </form>
+  <div id="stationInfo">
+    <h2>Station Information:</h2>
+    <p><strong>Name:</strong> <span id="stationName"></span></p>
+    <p><strong>Location:</strong> <span id="stationLocation"></span></p>
+    <p><strong>Lines:</strong> <span id="stationLines"></span></p>
+  </div>
+</body>
+
+</html>
