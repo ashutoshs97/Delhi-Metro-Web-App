@@ -44,22 +44,54 @@
 
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      color: #333333;
+      line-height: 28px;
       background-color: #9a6f5f;
     }
 
     .container {
-      width: 500px;
+      width: 70%;
       margin: 0 auto;
       padding: 20px;
-      background-color: #fff;
+      background-color: lightcyan;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       border-radius: 10px;
     }
 
-    h1 {
-      text-align: center;
-      color: #333;
+    h1,
+    h2 {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+    }
+    /* RESPONSIVE DESIGN */
+
+    /* Extra Small devices (tablets, 446px and less) */
+    @media (max-width: 456px) {
+
+      .container {
+        width: 100%;
+      }
+
+    }
+
+    /* Small devices (tablets, 768px and less) */
+    @media (max-width: 768px) {
+
+      .container {
+        width: 90%;
+      }
+    }
+
+
+    /* Medium devices (desktops, 992px and up) */
+    @media (max-width: 992px) {
+
+      .container {
+        width: 95%;
+      }
     }
 
     .dropdown {
@@ -74,7 +106,7 @@
       font-size: 16px;
       border: none;
       border-radius: 5px;
-      background-color: #f1f1f1;
+      background-color: lightgray;
       color: #333;
       appearance: none;
       cursor: pointer;
@@ -238,10 +270,13 @@
       <p><strong><i class="fa-solid fa-money-bills">&nbsp</i>ATM:</strong> <span id="stationATM"></span></p>
       <p><strong><i class="fa-solid fa-bowl-food">&nbsp</i>Snacks:</strong> <span id="stationSnacks"></span></p>
       <p><strong><i class="fa-solid fa-droplet">&nbsp</i>Water Booth:</strong> <span id="stationWater"></span></p>
-      <p><strong><i class="fa-solid fa-elevator">&nbsp</i>Lift/Escalator Available:</strong> <span id="stationLift"></span></p>
-      <p><strong><i class="fa-solid fa-bicycle">&nbsp</i>Travel (Yulu/Cab):</strong> <span id="stationTravel"></span></p>
+      <p><strong><i class="fa-solid fa-elevator">&nbsp</i>Lift/Escalator Available:</strong> <span
+          id="stationLift"></span></p>
+      <p><strong><i class="fa-solid fa-bicycle">&nbsp</i>Travel (Yulu/Cab):</strong> <span id="stationTravel"></span>
+      </p>
       <p><strong><i class="fa-solid fa-house-medical">&nbsp</i>Medical:</strong> <span id="stationMedical"></span></p>
-      <p><strong><i class="fa-solid fa-wheelchair ">&nbsp</i>Divyang Friendly Station:</strong> <span id="stationDivyang"></span></p>
+      <p><strong><i class="fa-solid fa-wheelchair ">&nbsp</i>Divyang Friendly Station:</strong> <span
+          id="stationDivyang"></span></p>
     </div>
   </div>
 
@@ -1873,18 +1908,12 @@
     }
   </script>
 
-
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="js/bootstrap.min.js"></script>
   <!-- SMOOTH SCROLL -->
   <script src="js/smooth-scroll.min.js"></script>
-  <!-- PARALLAX IMG -->
-  <script src="js/jquery.parallax-1.1.3.js"></script>
-  <!-- SCROLL REVEAL -->
-  <script src="js/scrollReveal.min.js"></script>
 </body>
-
 
 </html>
