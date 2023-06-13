@@ -730,3 +730,101 @@ h5 {
     height: 10vh;
     /* Adjust this value based on your requirements */
 }
+
+/* RESPONSIVE DESIGN */
+
+/* Extra Small devices (tablets, 446px and less) */
+@media (max-width: 456px) {
+
+    .btn {
+        min-width: 160px;
+        width: fit-content;
+        width: -moz-fit-content;
+        background-color: white;
+        padding: 0 30px;
+        height: 50px;
+        font-family: "Open Sans", sans-serif;
+        text-transform: uppercase;
+        font-size: 14px;
+        color: black;
+        letter-spacing: 2.8px;
+        font-weight: 700;
+        line-height: 1.6;
+        box-shadow: 0 15px 40px -10px rgba(0, 0, 0, 0.3);
+        position: relative;
+        transition: all 0.4s ease;
+        cursor: pointer;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border: 0;
+        /* btn text */
+    }
+}
+
+/* Small devices (tablets, 768px and less) */
+@media (max-width: 768px) {
+
+    .btn {
+        min-width: 60px;
+        width: fit-content;
+        width: -moz-fit-content;
+        background-color: white;
+        padding: 0px 0px;
+        height: 25px;
+        font-family: "Open Sans", sans-serif;
+        text-transform: uppercase;
+        font-size: 8px;
+        color: black;
+        letter-spacing: 2.8px;
+        font-weight: 700;
+        line-height: 1.6;
+        box-shadow: 0 15px 40px -10px rgba(0, 0, 0, 0.3);
+        position: relative;
+        transition: all 0.4s ease;
+        cursor: pointer;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border: 0;
+    }
+
+    .btn.btn.blueline {
+        min-width: 60px;
+        width: fit-content;
+        width: -moz-fit-content;
+        background-color: white;
+        padding: 0px 0px;
+        height: 25px;
+        font-family: "Open Sans", sans-serif;
+        text-transform: uppercase;
+        font-size: 8px;
+        color: black;
+        letter-spacing: 1px;
+        font-weight: 400;
+        line-height: 1.6;
+        box-shadow: 0 15px 4px -1px rgba(0, 0, 0, 0.3);
+        position: relative;
+        transition: all 0.4s ease;
+        cursor: pointer;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border: 0;
+    }
+}
+
+
+/* Medium devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+
+    .btn .btn.yellowline {
+        width: 30%;
+    }
+}
